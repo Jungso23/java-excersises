@@ -4,17 +4,15 @@ public class MacierzMinMax {
     public static void main(String[] args) {
         Random random = new Random();
         
-        // Tworzymy macierz 5x5
+
         int[][] macierz = new int[5][5];
-        
-        // Wypełniamy macierz losowymi liczbami z zakresu -5 do 5
+
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                macierz[i][j] = random.nextInt(11) - 5; // Zakres od -5 do 5
+                macierz[i][j] = random.nextInt(11) - 5; 
             }
         }
 
-        // Wyświetlamy macierz
         System.out.println("Macierz:");
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
@@ -22,8 +20,7 @@ public class MacierzMinMax {
             }
             System.out.println();
         }
-        
-        // Wyznaczanie minimów i maksimów dla każdej kolumny
+
         int[] minima = new int[5];
         int[] maxima = new int[5];
 
@@ -40,13 +37,11 @@ public class MacierzMinMax {
             }
         }
 
-        // Wyświetlanie minimów
         System.out.println("\nMinima dla każdej kolumny:");
         for (int j = 0; j < 5; j++) {
             System.out.println("Kolumna " + (j + 1) + ": " + minima[j]);
         }
 
-        // Wyświetlanie maksimów
         System.out.println("\nMaksima dla każdej kolumny:");
         for (int j = 0; j < 5; j++) {
             System.out.println("Kolumna " + (j + 1) + ": " + maxima[j]);
